@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  db:
+    image: 'postgres:12'
+    container_name: sql_injection_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_USER=sql_injection
+      - POSTGRES_DB=sql_injection
